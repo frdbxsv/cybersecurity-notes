@@ -338,5 +338,3 @@ Topics:
 ---
 
 > *"Understanding how systems work is the first step toward understanding how they can be secured."*
-
-bu terz readme necedi?

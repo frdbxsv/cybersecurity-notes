@@ -1,211 +1,342 @@
 # 🛡️ Cybersecurity Notes
 
-> Professional cybersecurity study notes documenting my journey from
-> Software Engineering to Offensive Security and Red Teaming.
+> Professional cybersecurity study notes documenting my journey from Software Engineering to Offensive Security and Red Teaming.
 
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Focus](https://img.shields.io/badge/Focus-Cybersecurity-blue)
 ![Track](https://img.shields.io/badge/Track-Red%20Team-red)
 ![Language](https://img.shields.io/badge/Language-English-orange)
 
-------------------------------------------------------------------------
-
-## 📑 Table of Contents
-
--   About
--   Goals
--   Lab Environment
--   Learning Roadmap
--   Repository Structure
--   Module 01
--   Useful Commands
--   References
--   Progress
--   Next Module
-
-------------------------------------------------------------------------
+---
 
 # 📖 About
 
-This repository documents my cybersecurity learning journey through
-structured notes, practical explanations, and hands-on labs. Every
-module is written as a long-term knowledge base focused on Offensive
-Security and Red Teaming.
+Welcome!
 
-## 🎯 Goals
+This repository contains my structured cybersecurity study notes, practical explanations, and hands-on documentation.
 
--   Build a professional cybersecurity knowledge base.
--   Document every concept I learn.
--   Practice through labs and CTFs.
--   Develop Python & Bash tools.
--   Prepare for real-world Red Team work.
+Rather than simply completing courses, I document every topic I learn in a professional format while building a long-term knowledge base.
 
-## 🧪 Lab Environment
+My primary focus areas include:
 
-  Category    Tools
-  ----------- -------------------------
-  OS          Kali Linux, Windows
-  Platforms   TryHackMe, Hack The Box
-  Network     Wireshark, Nmap
-  Web         Burp Suite
-  Scripting   Python, Bash
+- Networking
+- Linux
+- Windows
+- Active Directory
+- Web Security
+- Enumeration
+- Privilege Escalation
+- Red Team Methodology
 
-## 📂 Repository Structure
+---
 
-``` text
-Cybersecurity-Notes/
-├── 01-Networking/
-├── 02-Protocols/
-├── 03-Linux/
-├── 04-Windows/
-├── 05-ActiveDirectory/
-├── 06-WebSecurity/
-├── 07-Enumeration/
-├── 08-BurpSuite/
-├── 09-PrivilegeEscalation/
-└── 10-CTF-Writeups/
-```
+# 🎯 Goals
 
-## 📊 Learning Roadmap
+- Build a complete cybersecurity knowledge base.
+- Document every topic professionally.
+- Improve practical skills through labs and CTFs.
+- Develop Python and Bash automation scripts.
+- Prepare for real-world Red Team engagements.
 
-  Module                 Status
-  ---------------------- ----------------
-  Networking             ✅ Completed
-  Protocols              🚧 In Progress
-  Linux                  ⏳ Planned
-  Windows                ⏳ Planned
-  Active Directory       ⏳ Planned
-  Web Security           ⏳ Planned
-  Enumeration            ⏳ Planned
-  Burp Suite             ⏳ Planned
-  Privilege Escalation   ⏳ Planned
-  AD Attacks             ⏳ Planned
-  CTF Writeups           ⏳ Planned
+---
 
-# 🏛️ Module 01 -- Network Architecture & Models
+# 📂 Learning Roadmap
 
-Understanding network architecture is one of the most important
-foundations in cybersecurity.
+| Module | Status |
+|---------|--------|
+| Networking | ✅ Completed |
+| Protocols | 🚧 In Progress |
+| Linux | ⏳ Planned |
+| Windows | ⏳ Planned |
+| Active Directory | ⏳ Planned |
+| Web Security | ⏳ Planned |
+| Enumeration | ⏳ Planned |
+| Burp Suite | ⏳ Planned |
+| Privilege Escalation | ⏳ Planned |
+| Active Directory Attacks | ⏳ Planned |
+| CTF Writeups | ⏳ Planned |
 
-## 🌐 OSI vs TCP/IP
+---
 
-OSI contains seven conceptual layers while TCP/IP is the practical model
-used by modern networks.
+# 🏛️ Module 01 - Network Architecture & Models
 
-### Layer 7 -- Application
+Understanding network architecture is one of the most important foundations in cybersecurity.
 
-Protocols: HTTP, HTTPS, FTP, SSH, DNS
+Every packet, request, and attack travels through multiple protocol layers. Learning these layers makes it easier to understand how attacks work and how defenders detect them.
 
-**Red Team Perspective** - Web Application Testing - API Exploitation -
-Authentication Attacks - Phishing
+---
 
-### Layer 6 -- Presentation
+## 🌐 OSI vs TCP/IP Model (The Hacker's Perspective)
 
-Responsible for encryption, compression and formatting.
+Networking is commonly represented using two conceptual models:
 
-### Layer 5 -- Session
+- **OSI Model (7 Layers)** → Used for learning and troubleshooting.
+- **TCP/IP Model (4 Layers)** → Used by the real Internet.
 
-Creates and manages communication sessions.
+A security professional should understand both.
 
-### Layer 4 -- Transport
+---
 
-Protocols: TCP, UDP
+## 🖥️ OSI Model
 
-**Red Team Perspective** - Port Scanning - Banner Grabbing - Service
-Enumeration
+### Layer 7 — Application
 
-### Layer 3 -- Network
+**Purpose**
 
-Protocols: IP, ICMP, ARP
+Provides services directly to applications.
 
-**Red Team Perspective** - Ping Sweeps - IP Spoofing - Routing Analysis
+**Examples**
 
-### Layer 2 -- Data Link
+- HTTP
+- HTTPS
+- FTP
+- SSH
+- DNS
 
-Uses MAC addresses.
+**Red Team Perspective**
 
-**Red Team Perspective** - ARP Spoofing - MAC Spoofing - MAC Flooding
+- Web Application Testing
+- API Exploitation
+- Authentication Attacks
+- Phishing
 
-### Layer 1 -- Physical
+---
 
-Physical transmission medium.
+### Layer 6 — Presentation
 
-## 🌍 MAC vs IP
+**Purpose**
 
-### MAC Address
+Responsible for:
 
-Unique hardware identifier used within a LAN.
+- Encryption
+- Compression
+- Data Formatting
+
+Examples include:
+
+- SSL/TLS
+- JPEG
+- ASCII
+
+---
+
+### Layer 5 — Session
+
+**Purpose**
+
+Creates, manages and terminates communication sessions between hosts.
+
+---
+
+### Layer 4 — Transport
+
+**Purpose**
+
+Reliable or fast end-to-end communication.
+
+Protocols:
+
+- TCP
+- UDP
+
+**Red Team Perspective**
+
+- Port Scanning
+- Service Enumeration
+- Banner Grabbing
+- Network Reconnaissance
+
+Common Tools:
+
+- Nmap
+- Netcat
+
+---
+
+### Layer 3 — Network
+
+**Purpose**
+
+Routes packets between networks.
+
+Protocols:
+
+- IP
+- ICMP
+- ARP
+
+**Red Team Perspective**
+
+- Ping Sweeps
+- Traceroute
+- IP Spoofing
+- Routing Analysis
+
+---
+
+### Layer 2 — Data Link
+
+**Purpose**
+
+Uses MAC addresses for local communication.
+
+**Red Team Perspective**
+
+- ARP Spoofing
+- MAC Spoofing
+- MAC Flooding
+- Wi-Fi Attacks
+
+---
+
+### Layer 1 — Physical
+
+Responsible for transmitting raw bits.
+
+Examples:
+
+- Ethernet Cable
+- Fiber
+- Wireless Signals
+
+**Red Team Perspective**
+
+- Rogue Devices
+- USB Attacks
+- Rubber Ducky
+- Physical Intrusion
+
+---
+
+# 🌍 TCP/IP Model
+
+The Internet actually uses the TCP/IP protocol suite.
+
+| TCP/IP | OSI Equivalent |
+|---------|----------------|
+| Application | L5 + L6 + L7 |
+| Transport | L4 |
+| Internet | L3 |
+| Network Access | L1 + L2 |
+
+---
+
+# 🌐 MAC vs IP Address
+
+## MAC Address (Layer 2)
+
+**Definition**
+
+A unique physical address assigned to every Network Interface Card (NIC).
 
 Example:
 
-``` text
+```
 00:1A:2B:3C:4D:5E
 ```
 
-### IP Address
+Used only inside the local network.
 
-Logical address used for routing.
+### Security Risk
+
+- MAC Spoofing
+- MAC Filtering Bypass
+
+---
+
+## IP Address (Layer 3)
+
+Logical address assigned to devices.
 
 Example:
 
-``` text
+```
 192.168.1.25
 ```
 
-## 🛠️ Useful Commands
+Used for communication across different networks.
 
-``` bash
+Routers examine IP headers to forward packets toward their destination.
+
+---
+
+# 🛠️ Useful Commands
+
+```bash
 ipconfig
+
 ifconfig
+
 ping
+
 arp -a
+
 route print
+
 tracert
+
 traceroute
+
 nslookup
+
 netstat -ano
+
 ss -tuln
 ```
 
-## 📚 References
+---
 
--   Cisco CCNA
--   TryHackMe
--   Hack The Box Academy
--   PortSwigger Academy
--   RFC 791
--   RFC 793
--   RFC 768
--   RFC 1035
+# 📚 References
 
-## 📈 Progress
+- Cisco CCNA
+- TryHackMe
+- Hack The Box Academy
+- PortSwigger Web Security Academy
+- RFC 791
+- RFC 793
+- RFC 768
+- RFC 1035
 
-Networking ██████████ 100%
+---
 
-Protocols ██░░░░░░░░ 20%
+# ✅ Module Status
 
-Linux ░░░░░░░░░░ 0%
+**Module**
 
-Windows ░░░░░░░░░░ 0%
+Network Architecture
 
-## 📌 Disclaimer
+**Topics Covered**
 
-These notes are for educational purposes and are continuously updated as
-I learn new topics and complete practical labs.
+- OSI Model
+- TCP/IP Model
+- Layer Responsibilities
+- MAC Address
+- IP Address
+- Layer 2 vs Layer 3 Communication
 
-## 🚀 Next Module
+**Completion**
 
--   TCP
--   UDP
--   DNS
--   DHCP
--   HTTP
--   HTTPS
--   ICMP
--   ARP
+✅ 100%
 
-> "Understanding how systems work is the first step toward understanding
-> how they can be secured."
+---
 
+# 🚀 Next Module
 
-bele bir sey var mende bax bunu indi paylasmaq duzgun olar yoxsa gelecekde?
+Network Protocol Internals
+
+Topics:
+
+- TCP
+- UDP
+- DNS
+- DHCP
+- HTTP
+- HTTPS
+- ICMP
+- ARP
+
+---
+
+> *"Understanding how systems work is the first step toward understanding how they can be secured."*
+
+bu terz readme necedi?

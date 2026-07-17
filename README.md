@@ -10,23 +10,23 @@ To attack or defend a network, you must understand the layers through which data
 
 ### 🌐 The 7 Layers of the OSI Model
 
-1. **Layer 7: Application (Tətbiq)** 
+1. **Layer 7: Application** 
    * *What it does:* The interface between the user and the network (Protocols: HTTP, HTTPS, FTP, SSH, DNS).
    * *Red Team Context:* Web application hacking, phishing, and API exploitation happen at this layer.
-2. **Layer 6: Presentation (Təqdimat)**
+2. **Layer 6: Presentation**
    * *What it does:* Data formatting, encryption, and compression (e.g., SSL/TLS, ASCII, JPEG).
-3. **Layer 5: Session (Sessiya)**
+3. **Layer 5: Session**
    * *What it does:* Establishes, manages, and terminates connections between local and remote applications.
-4. **Layer 4: Transport (Nəqliyyat)**
+4. **Layer 4: Transport**
    * *What it does:* Manages end-to-end communication, flow control, and error recovery (Protocols: TCP, UDP).
    * *Red Team Context:* Port scanning (Nmap) directly analyzes Layer 4 behavior to identify open services.
-5. **Layer 3: Network (Şəbəkə)**
+5. **Layer 3: Network**
    * *What it does:* Handles logical addressing and routing of packets across different networks (Protocols: IP, ICMP, ARP).
    * *Red Team Context:* IP spoofing and network reconnaissance (`ping`, `traceroute`) operate here.
-6. **Layer 2: Data Link (Məlumat Kanalı)**
+6. **Layer 2: Data Link**
    * *What it does:* Handles physical addressing (MAC addresses) and frames data on the local network interface.
    * *Red Team Context:* Local network attacks like MAC Flooding, ARP Spoofing, and Wi-Fi cracking take place at L2.
-7. **Layer 1: Physical (Fiziki)**
+7. **Layer 1: Physical**
    * *What it does:* The physical transmission of raw binary data (bits) over cables, fibers, or radio waves.
    * *Red Team Context:* Physical breach, rogue devices (e.g., Rubber Ducky, Hak5 devices), or wiretapping.
 

@@ -116,7 +116,7 @@ Protocols:
 - Port Scanning
 - Service Enumeration
 - Banner Grabbing
-- Network Renaissance
+- Network Reconnaissance
 
 Common Tools:
 
@@ -202,3 +202,139 @@ The Internet actually uses the TCP/IP protocol suite.
 A unique physical address assigned to every Network Interface Card (NIC).
 
 Example:
+
+```
+00:1A:2B:3C:4D:5E
+```
+
+Used only inside the local network.
+
+### Security Risk
+
+- MAC Spoofing
+- MAC Filtering Bypass
+
+---
+
+## IP Address (Layer 3)
+
+Logical address assigned to devices.
+
+Example:
+
+```
+192.168.1.25
+```
+
+Used for communication across different networks.
+
+Routers examine IP headers to forward packets toward their destination.
+
+---
+
+# 🛠️ Useful Commands
+
+```bash
+ipconfig
+
+ifconfig
+
+ping
+
+arp -a
+
+route print
+
+tracert
+
+traceroute
+
+nslookup
+
+netstat -ano
+
+ss -tuln
+```
+
+---
+
+# 📚 References
+
+- Cisco CCNA
+- TryHackMe
+- Hack The Box Academy
+- PortSwigger Web Security Academy
+- RFC 791
+- RFC 793
+- RFC 768
+- RFC 1035
+
+---
+
+# ✅ Module Status
+
+**Module**
+
+Network Architecture
+
+**Topics Covered**
+
+- OSI Model
+- TCP/IP Model
+- Layer Responsibilities
+- MAC Address
+- IP Address
+- Layer 2 vs Layer 3 Communication
+
+**Completion**
+
+✅ 100%
+
+---
+
+# 🚀 Next Module
+
+Network Protocol Internals
+
+Topics:
+
+- TCP
+- UDP
+- DNS
+- DHCP
+- HTTP
+- HTTPS
+- ICMP
+- ARP
+
+---
+
+# 🎯 Goals
+
+- Build a complete cybersecurity knowledge base.
+- Document every topic professionally.
+- Improve practical skills through labs and CTFs.
+- Develop Python and Bash automation scripts.
+- Prepare for real-world Red Team engagements.
+
+---
+
+# 📂 Learning Roadmap
+
+| Module | Status |
+|---------|--------|
+| Networking | ✅ Completed |
+| Protocols | 🚧 In Progress |
+| Linux | ⏳ Planned |
+| Windows | ⏳ Planned |
+| Active Directory | ⏳ Planned |
+| Web Security | ⏳ Planned |
+| Enumeration | ⏳ Planned |
+| Burp Suite | ⏳ Planned |
+| Privilege Escalation | ⏳ Planned |
+| Active Directory Attacks | ⏳ Planned |
+| CTF Writeups | ⏳ Planned |
+
+---
+
+> *"Understanding how systems work is the first step toward understanding how they can be secured."*
